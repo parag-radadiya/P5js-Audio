@@ -3,7 +3,7 @@
 var audio = document.getElementById("myaudio");
 
 var context = new AudioContext();
-var src = context.createMediaElementSource("https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3");
+var src = context.createMediaElementSource(audio);
 $('#avtar').change(function(e){
 
     var fileName = e.target.files[0].name;

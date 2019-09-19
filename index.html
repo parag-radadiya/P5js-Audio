@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Audio Spectrum
+        </title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+    
+            $('#avatar').change(function(e){
+    
+                var file = e.target.files[0];
+                if(file){
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var audio = document.getElementById("myaudio");
+                        audio.src=e.target.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+
+            });
+    
+        });
+    
+    </script>
+
+    <body>
+        Select audio file:&nbsp
+        <input type="file" id="avatar" name="avatar" accept=".mp3">
+       &nbsp
+            <audio id="myaudio" controls>
+
+            </audio>
+      
+        <script>
+
+        </script>
+        <script src="p5.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
